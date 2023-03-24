@@ -1,204 +1,460 @@
-*{
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
-    
-    body{
-        nav{
-            background-color: #2fcfcf;
-            height: 80px;
-            width: 100%;
-            .enlace{
-                position: absolute;
-                padding: 10px 50px;
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  body {
+    background-color: #aaa;
+    nav {
+      background-color: #2fcfcf;
+      height: 80px;
+      width: 100%;
+      .enlace {
+        position: absolute;
+        padding: 10px 50px;
 
-                @media (max-width: 952px){
-                    .enlace{
-                        padding-left: 10px;
-                    }
-                }
-            }
-
-            .logo{
-                position: absolute;
-                width: 60px;
-            }
-
-            ul{
-                float: right;
-                margin-right: 20px;
-
-                @media (max-width: 852px){
-                    position: fixed;
-                    width: 100%;
-                    height: 100vh;
-                    background: #2c3e50;
-                    top: 80px;
-                    left: -100%;
-                    text-align: center;
-                    transition: all .5s;
-                    z-index: 3;
-                }
-            }
-
-            li{
-                display: inline-block;
-                line-height: 80px;
-                margin: 0 5px;
-
-                @media (max-width: 852px){
-                    display: block;
-                    margin: 50px 0;
-                    line-height: 30px;
-                }
-            }
-
-            a{
-                color: #fff;
-                font-size: 18px;
-                padding: 7px 13px;
-                border-radius: 3px;
-                text-transform: uppercase;
-
-                @media (max-width: 952px){
-                    font-size: 16px;
-                }
-
-                @media (max-width: 852px){
-                    font-size: 20px;
-                    z-index: 2;
-                }
-            }
-            li a.active, li a:hover{
-                background-color: #000090;
-                transition: .5s;
-
-                @media (max-width: 852px){
-                    background: none;
-                    color: red;
-                    z-index: 2;
-                }
-                z-index: 2;
-            }
-
-            .checkbtn{
-                font-size: 30px;
-                color: #fff;
-                float: right;
-                line-height: 80px;
-                margin-right: 40px;
-                cursor: pointer;
-                display: none;
-
-                @media (max-width: 852px){
-                    display: block;
-                }
-            }
-
-            #check{
-                display: none;
-            }
-
-            #check:checked ~ ul{
-                left: 0;
-            }
-            z-index: 2;
-
-            @media (max-width: 852px){
-                position: fixed;
-                z-index: 3;
-            }
+        @media (max-width: 952px) {
+          .enlace {
+            padding-left: 10px;
+          }
         }
-        section{
-            background-color: #aaa;
-            background-size: cover;
-            background-position: center center;
+      }
 
-            .tittlePage{
-                position: static;
-                display: flex;
-                text-align: center;
-                padding-top: 2.5vw;
-                justify-content: center;
-                width: 60vw;
-                margin: 0 auto;
+      .logo {
+        position: absolute;
+        width: 60px;
+      }
 
-                @media (max-width: 852px){
-                    padding-top: 8rem;
-                }
+      ul {
+        float: right;
+        margin-right: 20px;
+
+        @media (max-width: 852px) {
+          position: fixed;
+          width: 100%;
+          height: 100vh;
+          background: #2c3e50;
+          top: 80px;
+          left: -100%;
+          text-align: center;
+          transition: all 0.5s;
+          z-index: 3;
+        }
+      }
+
+      li {
+        display: inline-block;
+        line-height: 80px;
+        margin: 0 5px;
+
+        @media (max-width: 852px) {
+          display: block;
+          margin: 50px 0;
+          line-height: 30px;
+        }
+      }
+
+      a {
+        color: #fff;
+        font-size: 18px;
+        padding: 7px 13px;
+        border-radius: 3px;
+        text-transform: uppercase;
+
+        @media (max-width: 952px) {
+          font-size: 16px;
+        }
+
+        @media (max-width: 852px) {
+          font-size: 20px;
+          z-index: 2;
+        }
+      }
+      li a.active,
+      li a:hover {
+        background-color: #000090;
+        transition: 0.5s;
+
+        @media (max-width: 852px) {
+          background: none;
+          color: red;
+          z-index: 2;
+        }
+        z-index: 2;
+      }
+
+      .checkbtn {
+        font-size: 30px;
+        color: #fff;
+        float: right;
+        line-height: 80px;
+        margin-right: 40px;
+        cursor: pointer;
+        display: none;
+
+        @media (max-width: 852px) {
+          display: block;
+        }
+      }
+
+      #check {
+        display: none;
+      }
+
+      #check:checked ~ ul {
+        left: 0;
+      }
+      z-index: 2;
+
+      @media (max-width: 852px) {
+        position: fixed;
+        z-index: 3;
+      }
+    }
+    section {
+      background-color: #6cdfbc;
+      background-size: cover;
+      background-position: center center;
+
+      .tittlePage {
+        position: static;
+        display: flex;
+        text-align: center;
+        padding-top: 2.5vw;
+        justify-content: center;
+        width: 60vw;
+        margin: 0 auto;
+
+        @media (max-width: 852px) {
+          padding-top: 8rem;
+        }
+      }
+
+      .tittle {
+        font-size: 5vw;
+        color: #333;
+      }
+
+      .logoErizo {
+        width: 8vw;
+      }
+
+      .tittleErizo {
+        font-size: 3vw;
+      }
+
+      .tittlePajaro {
+        font-size: 3vw;
+      }
+
+      .tittleTortuga {
+        font-size: 3vw;
+      }
+
+      .textAnimal {
+        color: #000;
+        font-size: 2.5vw;
+      }
+
+      .textAnimalPajaro {
+        color: rgb(255, 0, 34);
+        font-size: 2.5vw;
+      }
+
+      .textAnimalTortuga {
+        color: #fff;
+        font-size: 2.5vw;
+      }
+
+      .backContainerInfo {
+        margin-top: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        background-color: #888;
+        width: 80vw;
+        height: 90vh;
+        border-radius: 15px;
+        box-shadow: #000 -3px -3px 20px;
+        .container {
+          position: relative;
+          display: inline-block;
+          background-color: #444;
+          border-radius: 30px;
+          margin: 2rem 2rem;
+          .infoText {
+            color: #54e7da;
+            font-family: Georgia, "Times New Roman", Times, serif;
+            font-size: 1.3rem;
+            padding: 1rem 1rem;
+          }
+        }
+      }
+
+      .containerTitleAlimentacion {
+        margin-top: 2rem;
+
+        .titleAlimentacion {
+          display: inline-block;
+          color: #333;
+          margin-left: 2rem;
+          font-size: 2.5rem;
+          @media (max-width: 670px) {
+            font-size: 2rem;
+          }
+
+          @media (max-width: 382px) {
+            font-size: 1.6rem;
+          }
+        }
+
+        #btnAlimentacion {
+          float: right;
+          width: 8rem;
+          margin-right: 5rem;
+          margin-top: 0.5rem;
+
+          @media (max-width: 670px) {
+            width: 6rem;
+            margin-right: 1rem;
+          }
+
+          @media (max-width: 576px) {
+            display: none;
+          }
+        }
+
+        .lineaAlimentacion {
+          color: black;
+        }
+      }
+
+      .containerBackComida {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 3rem;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90vw;
+        height: 20rem;
+
+        #cardComidaPerro {
+          margin-left: 2rem;
+          width: 25vw;
+          @media (max-width: 506px) {
+            width: 40vw;
+          }
+
+          #imageComidaPerro {
+            width: 10vw;
+            margin-top: 0.5rem;
+            margin-left: auto;
+            margin-right: auto;
+
+            @media (max-width: 506px) {
+              margin-top: 1rem;
+              width: 20vw;
             }
+          }
 
-            .tittle{
-                font-size: 5vw;
-                color: #348f8f;
+          #btnComidaPerro {
+            text-align: center;
+            font-size: 1rem;
+            margin-top: -2rem;
+            @media (max-width: 387px) {
+              font-size: 0.7rem;
             }
-            
-            .logoErizo{
-                width: 8vw;
-            }
+          }
+        }
 
-            .tittleErizo{
-                font-size: 3vw;
-            }
+        #cardComidaErizo {
+          width: 25vw;
+          margin-left: 2rem;
 
-            .tittlePajaro{
-                font-size: 3vw;
-            }
+          @media (max-width: 506px) {
+            display: none;
+          }
 
-            .tittleTortuga{
-                font-size: 3vw;
-            }
+          @media (max-width: 506px) {
+            width: 40vw;
+          }
 
-            .textAnimal{
-                color: #000;
-                font-size: 2.5vw;
-            }
+          #imageComidaErizo {
+            width: 14vw;
+            margin-top: 0.5rem;
+            margin-left: auto;
+            margin-right: auto;
 
-            .textAnimalPajaro{
-                color: rgb(255, 0, 34);
-                font-size: 2.5vw;
+            @media (max-width: 506px) {
+              margin-top: 1rem;
+              width: 30vw;
             }
+          }
 
-            .textAnimalTortuga{
-                color: #fff;
-                font-size: 2.5vw;
+          #btnComidaErizo {
+            text-align: center;
+            font-size: 1rem;
+            margin-top: -2rem;
+            @media (max-width: 387px) {
+              font-size: 0.7rem;
             }
+          }
+        }
 
-            .backContainerInfo{
-                margin-top: 2rem;
+        #cardComidaReptil {
+          width: 25vw;
+          margin-left: 2rem;
+
+          @media (max-width: 639px) {
+            display: none;
+          }
+
+          @media (max-width: 506px) {
+            width: 40vw;
+            height: 58vh;
+          }
+
+          #imageComidaReptil {
+            width: 12vw;
+            margin-top: 0.5rem;
+            margin-left: auto;
+            margin-right: auto;
+
+            @media (max-width: 506px) {
+              margin-top: 1rem;
+              width: 30vw;
+            }
+          }
+          #btnComidaReptil {
+            text-align: center;
+            font-size: 1rem;
+            margin-top: -2rem;
+
+            @media (max-width: 387px) {
+              font-size: 0.7rem;
+            }
+          }
+        }
+      }
+
+      .containerTitleJuguetes {
+        margin-top: 3rem;
+
+        .titleJuguetes {
+          display: inline-block;
+          color: #333;
+          margin-left: 2rem;
+          font-size: 2.5rem;
+
+          @media (max-width: 670px) {
+            font-size: 2rem;
+          }
+
+          @media (max-width: 382px) {
+            font-size: 1.6rem;
+          }
+        }
+
+        #btnJuguetes {
+          float: right;
+          width: 8rem;
+          margin-right: 5rem;
+          margin-top: 0.5rem;
+
+          @media (max-width: 670px) {
+            width: 6rem;
+            margin-right: 1rem;
+          }
+
+          @media (max-width: 576px) {
+            display: none;
+          }
+        }
+
+        .lineaJuguetes {
+          color: red;
+        }
+      }
+
+      .containerBackJuguetes {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 3rem;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90vw;
+        height: 20rem;
+
+        #cardJuguetePerro {
+          width: 25vw;
+          @media (max-width: 506px) {
+            width: 40vw;
+            height: 50vh;
+          }
+
+          #imageJuguetePerro {
+            width: 15vw;
+            margin-top: 0.5rem;
+            margin-left: auto;
+            margin-right: auto;
+
+            @media (max-width: 506px) {
+              margin-top: 1rem;
+              width: 20vw;
+            }
+          }
+
+          #btnComidaPerro {
+            text-align: center;
+            font-size: 1rem;
+            margin-top: -2rem;
+
+            @media (max-width: 387px) {
+              font-size: 0.7rem;
+            }
+          }
+        }
+
+        #cardJugueteGato{
+            width: 25vw;
+            margin-left: 2rem;
+            @media (max-width: 506px) {
+                width: 40vw;
+                height: 50vh;
+              }
+
+            #imageJugueteGato{
+                width: 15vw;
+                margin-top: 0.5rem;
                 margin-left: auto;
                 margin-right: auto;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-wrap: wrap;
-                background-color: #888;
-                width: 80vw;
-                height: 90vh;
-                border-radius: 15px;
-                box-shadow: #000 -3px -3px 20px;
-                .container{
-                    position: relative;
-                    display: inline-block;
-                    background-color: #444;
-                    border-radius: 30px;
-                    margin: 2rem 2rem;
-                    .infoText{
-                        color: #54e7da;
-                        font-family: Georgia, 'Times New Roman', Times, serif;
-                        font-size: 1.3rem;
-                        padding: 1rem 1rem;
-                    }
-                }
+
+                @media (max-width: 506px) {
+                    margin-top: 1rem;
+                    width: 20vw;
+                  }
+            }
+
+            #btnComidaGato{
+                text-align: center;
+                font-size: 1rem;
+                margin-top: -.2rem;
+                @media (max-width: 387px) {
+                    font-size: 0.7rem;
+                  }
             }
         }
-
-        
+      }
     }
-}
-
-@media (max-width: 852px){
-    
+  }
 }

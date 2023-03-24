@@ -5,6 +5,9 @@
   list-style: none;
   box-sizing: border-box;
 }
+* body {
+  background-color: #aaa;
+}
 * body nav {
   background-color: #2fcfcf;
   height: 80px;
@@ -71,13 +74,15 @@
     z-index: 2;
   }
 }
-* body nav li a.active, * body nav li a:hover {
+* body nav li a.active,
+* body nav li a:hover {
   background-color: #000090;
   transition: 0.5s;
   z-index: 2;
 }
 @media (max-width: 852px) {
-  * body nav li a.active, * body nav li a:hover {
+  * body nav li a.active,
+  * body nav li a:hover {
     background: none;
     color: red;
     z-index: 2;
@@ -110,7 +115,7 @@
   }
 }
 * body section {
-  background-color: #aaa;
+  background-color: #6cdfbc;
   background-size: cover;
   background-position: center center;
 }
@@ -130,7 +135,7 @@
 }
 * body section .tittle {
   font-size: 5vw;
-  color: #348f8f;
+  color: #333;
 }
 * body section .logoErizo {
   width: 8vw;
@@ -182,4 +187,273 @@
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 1.3rem;
   padding: 1rem 1rem;
+}
+* body section .containerTitleAlimentacion {
+  margin-top: 2rem;
+}
+* body section .containerTitleAlimentacion .titleAlimentacion {
+  display: inline-block;
+  color: #333;
+  margin-left: 2rem;
+  font-size: 2.5rem;
+}
+@media (max-width: 670px) {
+  * body section .containerTitleAlimentacion .titleAlimentacion {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 382px) {
+  * body section .containerTitleAlimentacion .titleAlimentacion {
+    font-size: 1.6rem;
+  }
+}
+* body section .containerTitleAlimentacion #btnAlimentacion {
+  float: right;
+  width: 8rem;
+  margin-right: 5rem;
+  margin-top: 0.5rem;
+}
+@media (max-width: 670px) {
+  * body section .containerTitleAlimentacion #btnAlimentacion {
+    width: 6rem;
+    margin-right: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  * body section .containerTitleAlimentacion #btnAlimentacion {
+    display: none;
+  }
+}
+* body section .containerTitleAlimentacion .lineaAlimentacion {
+  color: black;
+}
+* body section .containerBackComida {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90vw;
+  height: 20rem;
+}
+* body section .containerBackComida #cardComidaPerro {
+  margin-left: 2rem;
+  width: 25vw;
+}
+@media (max-width: 506px) {
+  * body section .containerBackComida #cardComidaPerro {
+    width: 40vw;
+  }
+}
+* body section .containerBackComida #cardComidaPerro #imageComidaPerro {
+  width: 10vw;
+  margin-top: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 506px) {
+  * body section .containerBackComida #cardComidaPerro #imageComidaPerro {
+    margin-top: 1rem;
+    width: 20vw;
+  }
+}
+* body section .containerBackComida #cardComidaPerro #btnComidaPerro {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: -2rem;
+}
+@media (max-width: 387px) {
+  * body section .containerBackComida #cardComidaPerro #btnComidaPerro {
+    font-size: 0.7rem;
+  }
+}
+* body section .containerBackComida #cardComidaErizo {
+  width: 25vw;
+  margin-left: 2rem;
+}
+@media (max-width: 506px) {
+  * body section .containerBackComida #cardComidaErizo {
+    display: none;
+  }
+}
+@media (max-width: 506px) {
+  * body section .containerBackComida #cardComidaErizo {
+    width: 40vw;
+  }
+}
+* body section .containerBackComida #cardComidaErizo #imageComidaErizo {
+  width: 14vw;
+  margin-top: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 506px) {
+  * body section .containerBackComida #cardComidaErizo #imageComidaErizo {
+    margin-top: 1rem;
+    width: 30vw;
+  }
+}
+* body section .containerBackComida #cardComidaErizo #btnComidaErizo {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: -2rem;
+}
+@media (max-width: 387px) {
+  * body section .containerBackComida #cardComidaErizo #btnComidaErizo {
+    font-size: 0.7rem;
+  }
+}
+* body section .containerBackComida #cardComidaReptil {
+  width: 25vw;
+  margin-left: 2rem;
+}
+@media (max-width: 639px) {
+  * body section .containerBackComida #cardComidaReptil {
+    display: none;
+  }
+}
+@media (max-width: 506px) {
+  * body section .containerBackComida #cardComidaReptil {
+    width: 40vw;
+    height: 58vh;
+  }
+}
+* body section .containerBackComida #cardComidaReptil #imageComidaReptil {
+  width: 12vw;
+  margin-top: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 506px) {
+  * body section .containerBackComida #cardComidaReptil #imageComidaReptil {
+    margin-top: 1rem;
+    width: 30vw;
+  }
+}
+* body section .containerBackComida #cardComidaReptil #btnComidaReptil {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: -2rem;
+}
+@media (max-width: 387px) {
+  * body section .containerBackComida #cardComidaReptil #btnComidaReptil {
+    font-size: 0.7rem;
+  }
+}
+* body section .containerTitleJuguetes {
+  margin-top: 3rem;
+}
+* body section .containerTitleJuguetes .titleJuguetes {
+  display: inline-block;
+  color: #333;
+  margin-left: 2rem;
+  font-size: 2.5rem;
+}
+@media (max-width: 670px) {
+  * body section .containerTitleJuguetes .titleJuguetes {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 382px) {
+  * body section .containerTitleJuguetes .titleJuguetes {
+    font-size: 1.6rem;
+  }
+}
+* body section .containerTitleJuguetes #btnJuguetes {
+  float: right;
+  width: 8rem;
+  margin-right: 5rem;
+  margin-top: 0.5rem;
+}
+@media (max-width: 670px) {
+  * body section .containerTitleJuguetes #btnJuguetes {
+    width: 6rem;
+    margin-right: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  * body section .containerTitleJuguetes #btnJuguetes {
+    display: none;
+  }
+}
+* body section .containerTitleJuguetes .lineaJuguetes {
+  color: red;
+}
+* body section .containerBackJuguetes {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90vw;
+  height: 20rem;
+}
+* body section .containerBackJuguetes #cardJuguetePerro {
+  width: 25vw;
+}
+@media (max-width: 506px) {
+  * body section .containerBackJuguetes #cardJuguetePerro {
+    width: 40vw;
+    height: 50vh;
+  }
+}
+* body section .containerBackJuguetes #cardJuguetePerro #imageJuguetePerro {
+  width: 15vw;
+  margin-top: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 506px) {
+  * body section .containerBackJuguetes #cardJuguetePerro #imageJuguetePerro {
+    margin-top: 1rem;
+    width: 20vw;
+  }
+}
+* body section .containerBackJuguetes #cardJuguetePerro #btnComidaPerro {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: -2rem;
+}
+@media (max-width: 387px) {
+  * body section .containerBackJuguetes #cardJuguetePerro #btnComidaPerro {
+    font-size: 0.7rem;
+  }
+}
+* body section .containerBackJuguetes #cardJugueteGato {
+  width: 25vw;
+  margin-left: 2rem;
+}
+@media (max-width: 506px) {
+  * body section .containerBackJuguetes #cardJugueteGato {
+    width: 40vw;
+    height: 50vh;
+  }
+}
+* body section .containerBackJuguetes #cardJugueteGato #imageJugueteGato {
+  width: 15vw;
+  margin-top: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 506px) {
+  * body section .containerBackJuguetes #cardJugueteGato #imageJugueteGato {
+    margin-top: 1rem;
+    width: 20vw;
+  }
+}
+* body section .containerBackJuguetes #cardJugueteGato #btnComidaGato {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: -0.2rem;
+}
+@media (max-width: 387px) {
+  * body section .containerBackJuguetes #cardJugueteGato #btnComidaGato {
+    font-size: 0.7rem;
+  }
 }/*# sourceMappingURL=home.css.map */
