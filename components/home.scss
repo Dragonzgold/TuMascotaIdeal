@@ -1,3 +1,8 @@
+@use "Mascotas";
+@use "Comida";
+@use "Juguetes";
+@use "SobreNosotros";
+
 * {
   padding: 0;
   margin: 0;
@@ -71,8 +76,7 @@
           z-index: 2;
         }
       }
-      li a.active,
-      li a:hover {
+      li a.active li a:hover {
         background-color: #000090;
         transition: 0.5s;
 
@@ -425,34 +429,136 @@
           }
         }
 
-        #cardJugueteGato{
-            width: 25vw;
-            margin-left: 2rem;
+        #cardJugueteGato {
+          width: 25vw;
+          margin-left: 2rem;
+          @media (max-width: 506px) {
+            width: 40vw;
+            height: 50vh;
+          }
+
+          @media (max-width: 506px) {
+            display: none;
+          }
+
+          #imageJugueteGato {
+            width: 15vw;
+            margin-top: 0.5rem;
+            margin-left: auto;
+            margin-right: auto;
+
             @media (max-width: 506px) {
-                width: 40vw;
-                height: 50vh;
-              }
-
-            #imageJugueteGato{
-                width: 15vw;
-                margin-top: 0.5rem;
-                margin-left: auto;
-                margin-right: auto;
-
-                @media (max-width: 506px) {
-                    margin-top: 1rem;
-                    width: 20vw;
-                  }
+              margin-top: 1rem;
+              width: 20vw;
             }
+          }
 
-            #btnComidaGato{
-                text-align: center;
-                font-size: 1rem;
-                margin-top: -.2rem;
-                @media (max-width: 387px) {
-                    font-size: 0.7rem;
-                  }
+          #btnComidaGato {
+            text-align: center;
+            font-size: 0.9rem;
+            margin-top: -0.2rem;
+            @media (max-width: 387px) {
+              font-size: 0.7rem;
             }
+          }
+        }
+
+        #cardJugueteErizo {
+          width: 25vw;
+          margin-left: 2rem;
+
+          @media (max-width: 639px) {
+            display: none;
+          }
+
+          #imageJugueteErizo {
+            width: 20vw;
+            margin-top: 0.5rem;
+            margin-left: auto;
+            margin-right: auto;
+          }
+
+          #btnJugueteErizo {
+            text-align: center;
+            font-size: 1rem;
+            margin-top: -0.2rem;
+          }
+        }
+      }
+      .piePagina {
+        margin-top: 7rem;
+        bottom: 0;
+        width: 100%;
+        background-color: #0a141d;
+      }
+
+      .piePagina .grupo1 {
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 50px;
+        padding: 45px 0px;
+      }
+
+      .piePagina .grupo1 .box figure {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .piePagina .grupo1 .box figure img {
+        width: 250px;
+      }
+
+      .piePagina .grupo1 .box h2 {
+        color: #fff;
+        margin-bottom: 25px;
+        font-size: 20px;
+      }
+
+      .piePagina .grupo1 .box p {
+        color: #efefef;
+        margin-bottom: 10px;
+      }
+
+      .piePagina .grupo1 .redSocial a {
+        display: inline-block;
+        text-decoration: none;
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        color: #fff;
+        margin-right: 10px;
+        background-color: #0d2033;
+        text-align: center;
+        transition: all 300ms ease;
+      }
+
+      .piePagina .grupo1 .redSocial a:hover {
+        color: #00cdff;
+      }
+
+      .piePagina .grupo2 {
+        background-color: #0a1a2a;
+        padding: 15px 10px;
+        text-align: center;
+        color: #fff;
+      }
+
+      .piePagina .grupo2 small {
+        font-size: 15px;
+      }
+
+      @media screen and (max-width: 800px) {
+        .piePagina .grupo1 {
+          width: 90%;
+          grid-template-columns: repeat(1, 1fr);
+          grid-gap: 30px;
+          padding: 35px 0px;
         }
       }
     }

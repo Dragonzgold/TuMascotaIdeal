@@ -1,0 +1,279 @@
+* {
+  nav {
+    background-color: #2fcfcf;
+    height: 80px;
+    width: 100%;
+    .enlace {
+      position: absolute;
+      padding: 10px 50px;
+
+      @media (max-width: 952px) {
+        .enlace {
+          padding-left: 10px;
+        }
+      }
+    }
+
+    .logo {
+      position: absolute;
+      width: 60px;
+    }
+
+    ul {
+      float: right;
+      margin-right: 20px;
+
+      @media (max-width: 852px) {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+        z-index: 3;
+      }
+    }
+
+    li {
+      display: inline-block;
+      line-height: 80px;
+      margin: 0 5px;
+
+      @media (max-width: 852px) {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+      }
+    }
+
+    a {
+      color: #fff;
+      font-size: 18px;
+      padding: 7px 13px;
+      border-radius: 3px;
+      text-transform: uppercase;
+
+      @media (max-width: 952px) {
+        font-size: 16px;
+      }
+
+      @media (max-width: 852px) {
+        font-size: 20px;
+        z-index: 2;
+      }
+    }
+    li a.active,
+    li a:hover {
+      background-color: #000090;
+      transition: 0.5s;
+
+      @media (max-width: 852px) {
+        background: none;
+        color: red;
+        z-index: 2;
+      }
+      z-index: 2;
+    }
+
+    .checkbtn {
+      font-size: 30px;
+      color: #fff;
+      float: right;
+      line-height: 80px;
+      margin-right: 40px;
+      cursor: pointer;
+      display: none;
+
+      @media (max-width: 852px) {
+        display: block;
+      }
+    }
+
+    #check {
+      display: none;
+    }
+
+    #check:checked ~ ul {
+      left: 0;
+    }
+    z-index: 2;
+
+    @media (max-width: 852px) {
+      position: fixed;
+      z-index: 3;
+    }
+  }
+  section {
+    .containerCardComida {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 0 auto;
+
+      #cartaComidaPerro1{
+        margin-top: 4rem;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 18rem;
+        @media (max-width: 852px) {
+          width: 10rem;
+        }
+        @media (max-width: 350px) {
+          width: 8rem;
+        }
+        #parrafoCard{
+          @media (max-width: 700px) {
+            display: none;
+          }
+        }
+        #perroComidaImg{
+          width: 25rem;
+          @media (max-width: 852px) {
+            margin-left: 5vw;
+            width: 15rem;
+          }
+        }
+      }
+
+      #cartaComidaErizo1{
+        margin-top: 4rem;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 2rem;
+        width: 18rem;
+        @media (max-width: 852px) {
+          width: 10rem;
+        }
+        @media (max-width: 350px) {
+          width: 7.5rem;
+        }
+        #parrafoCard{
+          @media (max-width: 700px) {
+            display: none;
+          }
+        }
+        #imgComidaErizo{
+          width: 15.5rem;
+          @media (max-width: 852px) {
+            width: 8.6rem;
+          }
+          @media (max-width: 350px) {
+            width: 7rem;
+          }
+        }
+
+        #imgModalErizo{
+          width: 25rem;
+          @media (max-width: 852px) {
+            margin-left: 10vw;
+            width: 15rem;
+          }
+        }
+      }
+
+      #cartaComidaPeces{
+        margin-top: 4rem;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 2rem;
+        width: 18rem;
+        height: 33.5rem;
+        @media (max-width: 852px) {
+          width: 10rem;
+        }
+        @media (max-width: 700px) {
+          height: 22.5rem;
+        }
+        @media (max-width: 350px) {
+          width: 7.5rem;
+          height: 24.5rem;
+        }
+        #imgComidaPeces{
+          @media (max-width: 350px) {
+            width: 7rem;
+          }
+        }
+        #parrafoCard{
+          @media (max-width: 700px) {
+            display: none;
+          }
+        }
+        #imgModalPeces{
+          width: 27rem;
+          @media (max-width: 852px) {
+            width: 18rem;
+          }
+        }
+      }
+
+      #cartaComidaReptil{
+        margin-top: 4rem;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 2rem;
+        width: 18rem;
+        @media (max-width: 852px) {
+          width: 10rem;
+        }
+        @media (max-width: 350px) {
+          width: 7.5rem;
+        }
+        #parrafoCard{
+          @media (max-width: 700px) {
+            display: none;
+          }
+        }
+        #imgComidaReptil{
+          width: 12rem;
+          @media (max-width: 852px) {
+            width: 5.8rem;
+          }
+        }
+        #imgModalReptil{
+          width: 15rem;
+          @media (max-width: 852px) {
+            width: 8  rem;
+          }
+        }
+      }
+      #cartaComidaConejo{
+        margin-top: 4rem;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 2rem;
+        width: 18rem;
+        @media (max-width: 852px) {
+          width: 10rem;
+        }
+        @media (max-width: 350px) {
+          width: 7.5rem;
+        }
+        #parrafoCard{
+          @media (max-width: 700px) {
+            display: none;
+          }
+        }
+        #imgModalModal{
+          width: 20rem;
+          @media (max-width: 852px) {
+            width: 20rem;
+          }
+        }
+      }
+    }
+  }
+}

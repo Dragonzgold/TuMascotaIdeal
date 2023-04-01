@@ -1,0 +1,649 @@
+*{
+    nav {
+        background-color: #2fcfcf;
+        height: 80px;
+        width: 100%;
+        .enlace {
+          position: absolute;
+          padding: 10px 50px;
+  
+          @media (max-width: 952px) {
+            .enlace {
+              padding-left: 10px;
+            }
+          }
+        }
+  
+        .logo {
+          position: absolute;
+          width: 60px;
+        }
+  
+        ul {
+          float: right;
+          margin-right: 20px;
+  
+          @media (max-width: 852px) {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: #2c3e50;
+            top: 80px;
+            left: -100%;
+            text-align: center;
+            transition: all 0.5s;
+            z-index: 3;
+          }
+        }
+  
+        li {
+          display: inline-block;
+          line-height: 80px;
+          margin: 0 5px;
+  
+          @media (max-width: 852px) {
+            display: block;
+            margin: 50px 0;
+            line-height: 30px;
+          }
+        }
+  
+        a {
+          color: #fff;
+          font-size: 18px;
+          padding: 7px 13px;
+          border-radius: 3px;
+          text-transform: uppercase;
+  
+          @media (max-width: 952px) {
+            font-size: 16px;
+          }
+  
+          @media (max-width: 852px) {
+            font-size: 20px;
+            z-index: 2;
+          }
+        }
+        li a.active,
+        li a:hover {
+          background-color: #000090;
+          transition: 0.5s;
+  
+          @media (max-width: 852px) {
+            background: none;
+            color: red;
+            z-index: 2;
+          }
+          z-index: 2;
+        }
+  
+        .checkbtn {
+          font-size: 30px;
+          color: #fff;
+          float: right;
+          line-height: 80px;
+          margin-right: 40px;
+          cursor: pointer;
+          display: none;
+  
+          @media (max-width: 852px) {
+            display: block;
+          }
+        }
+  
+        #check {
+          display: none;
+        }
+  
+        #check:checked ~ ul {
+          left: 0;
+        }
+        z-index: 2;
+  
+        @media (max-width: 852px) {
+          position: fixed;
+          z-index: 3;
+        }
+    }
+
+    section{
+        background-color: #6cdfbc;
+        background-size: cover;
+        background-position: center center;
+
+        .containerTitle{
+            position: static;
+            display: flex;
+            text-align: center;
+            padding-top: 2.5vw;
+            justify-content: center;
+            width: 60vw;
+            margin: 0 auto;
+
+            .titleMascotas{
+                font-size: 5vw;
+                color: #333;
+            }
+            .logoErizo {
+                width: 8vw;
+            }
+            @media (max-width: 852px) {
+                padding-top: 8rem;
+            }
+        }
+        section{
+            position: relative;
+            display: flex;
+            width: 800px;
+            height: 430px;
+            margin: 0 auto;
+
+            @media (max-width: 820px) {
+                width: 500px;
+            }
+            @media (max-width: 505px) {
+                width: 300px;
+                height: 200px;
+            }
+            img{
+                width: 0px;
+                flex-grow: 1;
+                object-fit: cover;
+                opacity: .8;
+                transition: .5s ease;
+            }
+            img:hover{
+                cursor: crosshair;
+                width: 300px;
+                opacity: 1;
+                filter: contrast(120%);
+            }
+        }
+        .containerTitleCaninos{
+            display: inline-block;
+            color: #000;
+            margin-left: 1rem;
+            margin-top: 2rem;
+
+            .titleCaninos{
+                font-size: 5rem;
+
+                #fontDog{
+                    font-size: 3.5rem;
+                    @media (max-width: 670px) {
+                        font-size: 2rem;
+                    }
+            
+                    @media (max-width: 382px) {
+                        font-size: 1.6rem;
+                    }
+                }
+
+                @media (max-width: 670px) {
+                    font-size: 2rem;
+                }
+        
+                @media (max-width: 382px) {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+
+        .containerExteriorText {
+            margin-top: 2rem;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: #888;
+            width: 80vw;
+            height: 25vh;
+            border-radius: 15px;
+            box-shadow: #000 -3px -3px 20px;
+            overflow: auto;
+            .containerBackText {
+              position: relative;
+              display: inline-block;
+              background-color: #444;
+              border-radius: 30px;
+              margin-left: 2rem;
+              margin-right: 2rem;
+              .textMascotas {
+                color: #54e7da;
+                font-family: Georgia, "Times New Roman", Times, serif;
+                font-size: 1.3rem;
+                padding: 1rem 1rem;
+                text-align: center;
+              }
+            }
+          }
+
+        .conatinerTextCaninos{
+            position: relative;
+            margin: 0 auto;
+
+            .containerTextCaninosInter{
+                .titleCaninosPequeños{
+                    text-align: center;
+                    font-size: 2.5rem;
+                }
+            }
+        }
+
+        .conatinerTextCaninosMedianos{
+            position: relative;
+            margin-top: 2rem;
+
+            .containerTextCaninosInter{
+                .titleCaninosPequeños{
+                    text-align: center;
+                    font-size: 2.5rem;
+                }
+            }
+        }
+
+        .conatinerTextCaninosGrandes{
+            position: relative;
+            margin-top: 2rem;
+
+            .containerTextCaninosInter{
+                .titleCaninosPequeños{
+                    text-align: center;
+                    font-size: 2.5rem;
+                }
+            }
+        }
+        .containerTitleMininos{
+            display: inline-block;
+            color: #000;
+            margin-left: 1rem;
+            margin-top: 2rem;
+
+            .titleMininos{
+
+                #fontCat{
+                    font-size: 3.5rem;
+                    
+                @media (max-width: 670px) {
+                    font-size: 2rem;
+                }
+        
+                @media (max-width: 382px) {
+                    font-size: 1.6rem;
+                }
+                }
+                font-size: 5rem;
+                @media (max-width: 670px) {
+                    font-size: 2rem;
+                }
+        
+                @media (max-width: 382px) {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+        .conatinerTextMininosCorto{
+            position: relative;
+            margin-top: 2rem;
+
+            .containerTextMininosInter{
+                .titleMininosPequeños{
+                    text-align: center;
+                    font-size: 2.5rem;
+                }
+            }
+        }
+        .conatinerTextMininosMediano{
+            position: relative;
+            margin-top: 2rem;
+
+            .containerTextMininosInter{
+                .titleMininosPequeños{
+                    text-align: center;
+                    font-size: 2.5rem;
+                }
+            }
+        }
+        
+        .conatinerTextMininosLargo{
+            position: relative;
+            margin-top: 2rem;
+
+            .containerTextMininosInter{
+                .titleMininosLargos{
+                    text-align: center;
+                    font-size: 2.5rem;
+                }
+            }
+        }
+        .containerTitleLagartos{
+            display: inline-block;
+            color: #000;
+            margin-left: 1rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+
+            .titleLagartos{
+                font-size: 5rem;
+                #fontLizard{
+                    font-size: 3rem;
+
+                    @media (max-width: 670px) {
+                        font-size: 2rem;
+                    }
+            
+                    @media (max-width: 382px) {
+                        font-size: 1.6rem;
+                    }
+                }
+                @media (max-width: 670px) {
+                    font-size: 2rem;
+                }
+        
+                @media (max-width: 382px) {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+        
+        .containerTitleErizos{
+            display: inline-block;
+            color: #000;
+            margin-left: 1rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+
+            .titleErizos{
+                font-size: 5rem;
+                @media (max-width: 670px) {
+                    font-size: 2rem;
+                }
+        
+                @media (max-width: 382px) {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+        .containerTitlePeces{
+            display: inline-block;
+            color: #000;
+            margin-left: 1rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+
+            .titlePeces{
+                font-size: 5rem;
+
+                #fontFish{
+                    font-size: 4rem;
+
+                    @media (max-width: 670px) {
+                        font-size: 2rem;
+                    }
+            
+                    @media (max-width: 382px) {
+                        font-size: 1.6rem;
+                    }
+                }
+                @media (max-width: 670px) {
+                    font-size: 2rem;
+                }
+        
+                @media (max-width: 382px) {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+        .containerTitlePajaros{
+            display: inline-block;
+            color: #000;
+            margin-left: 1rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+
+            .titlePajaros{
+                font-size: 5rem;
+                
+                @media (max-width: 670px) {
+                    font-size: 2rem;
+                }
+        
+                @media (max-width: 382px) {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+        .containerTitlePajaros{
+            display: inline-block;
+            color: #000;
+            margin-left: 1rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+
+            .titlePajaros{
+                font-size: 5rem;
+
+                .iconoBird{
+                    @media (max-width: 670px) {
+                        width: 2rem;
+                    }
+            
+                    @media (max-width: 382px) {
+                        width: 1.6rem;
+                    }
+                }
+                @media (max-width: 670px) {
+                    font-size: 2rem;
+                }
+        
+                @media (max-width: 382px) {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+        .containerTitleCangrejo{
+            display: inline-block;
+            color: #000;
+            margin-left: 1rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+
+            .titleCangrejo{
+                font-size: 5rem;
+
+                .iconoCangrejo{
+
+                    width: 5rem;
+
+                    @media (max-width: 670px) {
+                        width: 2rem;
+                    }
+            
+                    @media (max-width: 382px) {
+                        width: .5rem;
+                    }
+                }
+
+                @media (max-width: 670px) {
+                    font-size: 2rem;
+                }
+        
+                @media (max-width: 382px) {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+        .containerTitleSerpiente{
+            display: inline-block;
+            color: #000;
+            margin-left: 1rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+
+            .titleSerpiente{
+                font-size: 5rem;
+
+                .iconoSerpiente{
+                    width: 4rem;
+                    @media (max-width: 670px) {
+                        width: 2rem;
+                    }
+            
+                    @media (max-width: 382px) {
+                        width: 1.6rem;
+                    }
+                }
+                @media (max-width: 670px) {
+                    font-size: 2rem;
+                }
+        
+                @media (max-width: 382px) {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+        .containerTitleLiebre{
+            display: inline-block;
+            color: #000;
+            margin-left: 1rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+
+            .titleLiebre{
+                font-size: 5rem;
+                @media (max-width: 670px) {
+                    font-size: 2rem;
+                }
+        
+                @media (max-width: 382px) {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+        .containerTitleConejo{
+            display: inline-block;
+            color: #000;
+            margin-left: 1rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+
+            .titleConejo{
+                font-size: 5rem;
+
+                .iconoConejo{
+                    @media (max-width: 670px) {
+                        width: 2rem;
+                    }
+            
+                    @media (max-width: 382px) {
+                        width: 1.6rem;
+                    }
+                }
+                @media (max-width: 670px) {
+                    font-size: 2rem;
+                }
+        
+                @media (max-width: 382px) {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+        .containerTitleCuyos{
+            display: inline-block;
+            color: #000;
+            margin-left: 1rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+
+            .titleCuyos{
+                font-size: 5rem;
+                @media (max-width: 670px) {
+                    font-size: 2rem;
+                }
+        
+                @media (max-width: 382px) {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+
+        .piePagina {
+            margin-top: 7rem;
+            bottom: 0;
+            width: 100%;
+            background-color: #0a141d;
+          }
+    
+          .piePagina .grupo1 {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 50px;
+            padding: 45px 0px;
+          }
+    
+          .piePagina .grupo1 .box figure {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+    
+          .piePagina .grupo1 .box figure img {
+            width: 250px;
+          }
+    
+          .piePagina .grupo1 .box h2 {
+            color: #fff;
+            margin-bottom: 25px;
+            font-size: 20px;
+          }
+    
+          .piePagina .grupo1 .box p {
+            color: #efefef;
+            margin-bottom: 10px;
+          }
+    
+          .piePagina .grupo1 .redSocial a {
+            display: inline-block;
+            text-decoration: none;
+            width: 45px;
+            height: 45px;
+            line-height: 45px;
+            color: #fff;
+            margin-right: 10px;
+            background-color: #0d2033;
+            text-align: center;
+            transition: all 300ms ease;
+          }
+    
+          .piePagina .grupo1 .redSocial a:hover {
+            color: #00cdff;
+          }
+    
+          .piePagina .grupo2 {
+            background-color: #0a1a2a;
+            padding: 15px 10px;
+            text-align: center;
+            color: #fff;
+          }
+    
+          .piePagina .grupo2 small {
+            font-size: 15px;
+          }
+    
+          @media screen and (max-width: 800px) {
+            .piePagina .grupo1 {
+              width: 90%;
+              grid-template-columns: repeat(1, 1fr);
+              grid-gap: 30px;
+              padding: 35px 0px;
+            }
+          }
+    }
+}
